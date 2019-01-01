@@ -62,7 +62,7 @@ public class Controller {
         }, mutationRate);
 
         ga.createNewGeneration();
-        while (ga.getBestIndividual().getFitness() <= 0.99 || !stopFlag) {
+        while (ga.getBestIndividual().getFitness() <= 0.99 || stopFlag) {
             ga.createNewGeneration();
             System.out.print(ga.getCurentGeneration() + "   BestFitness = " + ga.getBestIndividual().getFitness() + " Best string:  ");
             for (char ch : ga.getBestIndividual().getGenes()) {
